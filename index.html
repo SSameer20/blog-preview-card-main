@@ -12,31 +12,35 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;500;700&family=Noto+Sans:ital,wght@0,300;0,500;0,600;1,200&family=Roboto:wght@100;300;900&display=swap');
     * {
       padding: 0;
       margin: 0;
+      font-family: Figtree;
     }
 
    
 
 .object {
-  background-color: rgb(222, 222, 67);
+  background-color: hsl(47, 88%, 63%);
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 50px;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
   min-width: 400px;
 }
 
 .card {
-  transform: scale(0.8);
+  
   background-color: rgb(242, 244, 246);
   border: 1px solid black;
-  box-shadow: 0.5px 0.5px 1px 1px;
+  box-shadow: 5px 5px 1px 1px;
   width: 360px;
   display: flex;
-  height: 480px;
+  height: 500px;
   justify-content: center;
   align-items: start; /* Adjust as needed */
   border-radius: 20px;
@@ -54,11 +58,15 @@
       border-radius: 20px;
       border-radius: 20px;
       overflow: hidden;
+      margin-bottom: 10px;
     }
 
     .description>div {
       padding: 10px;
 
+    }
+    .desc p{
+      color: hsl(0, 0%, 50%);
     }
 
     .credit {
@@ -76,7 +84,7 @@
     }
 
     .type button {
-      background-color: yellow;
+      background-color: hsl(47, 88%, 63%);
       color: black;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       padding: 10px 10px;
@@ -88,7 +96,7 @@
     /* Example media query for mobile devices */
     @media only screen and (max-width: 600px) {
       .object {
-        background-color: rgb(240, 240, 60);
+        background-color: hsl(47, 88%, 63%);
         width: 100%;
         height: 100vh;
         display: flex;
@@ -97,7 +105,7 @@
       }
       
       .card {
-        transform: scale(0.6);
+        transform: scale(0.8);
         background-color: rgb(242, 244, 246);
         border: 1px solid black;
         box-shadow: 0.5px 0.5px 1px 1px;
@@ -109,6 +117,15 @@
         border-radius: 20px;
       }
 
+      .desc p{
+        color: hsl(0, 0%, 50%);
+      }
+
+      .user-credits{
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+      }
      
 
 
@@ -191,6 +208,8 @@
       </div>
 
     </div>
+
+    <div class="user-credits">code by <a href="https://github.com/SSameer20/">@Sameer20</a></div>
   </div>
 
 
